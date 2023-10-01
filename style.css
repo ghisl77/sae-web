@@ -77,32 +77,42 @@ video {
     object-fit: cover;
 }
 
-.para{
-    background-color: #b6b6b6;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-left: 300px;
-    padding-right: 300px;
-    font-family: "Montserrat", sans-serif;
+.para {
+    font-size: 16px; /* Taille de police */
+    line-height: 1.6; /* Espacement entre les lignes */
+    margin: 20px; /* Marge extérieure */
+    padding: 20px; /* Remplissage intérieur */
+    background-color: #b8b6b6; /* Couleur de fond */
+    border: 1px solid #ddd; /* Bordure */
+    border-radius: 20px; /* Coins arrondis */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ombre */
 }
 
 .total{
     display:flex;
     justify-content: space-between;
     padding: 30px 10%;
-    background-color: rgb(87, 87, 87);
+    background-color: rgb(53, 53, 53);
 }
-
-
+.total {
+    display: flex;
+    justify-content: space-between;
+}
 .total p{
-    text-align: center;
-    background-color: grey;
-    height: 200px;
-    padding-top: 50%;
+    color : white;
+}
+.elu, .commune, .infos {
+    flex: 1; /* Chaque div occupera une part égale de l'espace disponible */
+    text-align: center; /* Centre le contenu horizontalement */
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 5px;
+    transition: transform 0.3s; /* Pour ajouter une transition agréable lorsqu'elles sont agrandies */
 }
 
-.total img{
-    background-color: rgb(126, 126, 126);
+.elu:hover, .commune:hover, .infos:hover {
+    transform: scale(1.1); /* Agrandit la div au survol de la souris */
+    font-size: 18px;
 }
 
 .actu{
@@ -124,13 +134,7 @@ video {
     padding: 20px;
 }
 
-.total div:hover {
-    height:200px;
-    font-size : 19px;
-}
-.total img:hover{
-    height:200px;
-}
+
 .act{
     margin-left:100px;
     font-size: 30px;
@@ -139,6 +143,15 @@ video {
 .haut img:hover{
     height: 45%;
 }
+/* Ajoutez ces styles dans votre fichier CSS */
+.actu img {
+    transition: transform 0.3s; /* Ajoutez une transition pour une animation fluide */
+}
+
+.actu img:hover {
+    transform: scale(1.1); /* Agrandir l'image au survol de la souris */
+}
+
 .footer{
     background-color: #5b5b5b;
     width: 100%;
@@ -209,6 +222,18 @@ video {
 .footer-col .social-links a:hover{
     color: #24262b;
     background-color: #ffffff;
+}
+
+.video {
+    width: 640px; /* Largeur de la vidéo */
+    height: 40px; /* Hauteur de la vidéo */
+    margin: 0 auto; /* Centrer horizontalement */
+}
+
+/* Styles pour la vidéo elle-même */
+video {
+    width: 100%; /* Pour s'adapter au conteneur */
+    height: 100%; /* Pour s'adapter au conteneur */
 }
 
 
