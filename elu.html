@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Elus</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style-elu.css">
+    </head>
+    <body>
+        <header>
+            <a href="Accueil.html"><img class="logo" src="images/logo.png" alt="logo"></a>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+    const afficherTexteBtn = document.getElementById("cliquable");
+    const overlay = document.getElementById("overlay");
+    const modal = document.getElementById("modal");
+    const fermerModalBtn = document.getElementById("fermerModal");
+
+    afficherTexteBtn.addEventListener("click", function () {
+        overlay.style.display = "block";
+    });
+
+    fermerModalBtn.addEventListener("click", function () {
+        overlay.style.display = "none";
+    });
+});
+
+            </script>
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="Accueil.html">Accueil</a></li>
+                    <li><a href="#">Actualités</a></li>
+                    <li><a href="#">Elus</a></li>
+                    <li><a href="#">Communes menbres</a></li>
+                    <li><a href="#">Infos pratiques</a></li>
+                </ul>
+            </nav>
+            <a class="cta" href="#bottom"><button>Contact</button></a>
+        </header>
+        <div class = "titre">Les Elus
+        </div>
+        <div class = "president">
+            <h2>President</h2>
+            <div id="cliquable">
+                <img src="images/president.jpg" alt="Description de l'image">
+                <div class = "texte-bas">
+                    <h3>Nom Prenom</h3>
+                    <p>Maire de la Ville de Terre de Bas
+                        Présidente par délégation, pour les communes des Saintes, des commissions :
+                        Transports urbain, scolaire et maritime
+                        Environnement et Cadre de vie
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class = "president">
+            <h2>Vice-President</h2>
+            <div id="cliquable">
+                <img src="images/president.jpg" alt="Description de l'image">
+                <div class = "texte-bas">
+                    <h3>Nom Prenom</h3>
+                    <p>Maire de la Ville de Terre de Bas
+                        Présidente par délégation, pour les communes des Saintes, des commissions :
+                        Transports urbain, scolaire et maritime
+                        Environnement et Cadre de vie
+                    </p>
+                </div>
+            </div>
+        </div>
+    <div class="overlay" id="overlay">
+        <div class="modal" id="modal">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <button id="fermerModal">Fermer</button>
+    </div>
+    
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>company</h4>
+                        <ul>
+                            <li><a href="#">about us</a></li>
+                            <li><a href="#">our services</a></li>
+                            <li><a href="#">privacy policy</a></li>
+                            <li><a href="#">affiliate program</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>get help</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">shipping</a></li>
+                            <li><a href="#">returns</a></li>
+                            <li><a href="#">order status</a></li>
+                            <li><a href="#">payment options</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>online shop</h4>
+                        <ul>
+                            <li><a href="#">watch</a></li>
+                            <li><a href="#">bag</a></li>
+                            <li><a href="#">shoes</a></li>
+                            <li><a href="#">dress</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
