@@ -167,11 +167,14 @@ header{
     font-size: 24px; /* Taille du texte en gros */
     margin-bottom: 10px; /* Ajouter une marge en bas du paragraphe */
 }
-#cliquable *{
+.cliquable *{
     background-color: rgb(119, 168, 141);
+    
+}
+.cliquable{
     transition: transform 0.3s;
 }
-#cliquable:hover {
+.cliquable:hover {
     transform: scale(1.1);
 }
 
