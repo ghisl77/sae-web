@@ -6,25 +6,32 @@
         <link rel="stylesheet" href="style-elu.css">
     </head>
     <body>
+        <script>
+            const cars = ["Saab", "Volvo", "BMW"];
+            document.addEventListener("DOMContentLoaded", function () {
+                const afficherTexteBtn = document.getElementsByClassName("cliquable");
+                const overlay = document.querySelector(".overlay");
+                const modal = document.querySelector(".modal");
+                const fermerModalBtn = document.querySelector(".fermerModal");
+
+                for (let i = 0; i < afficherTexteBtn.length; i++) {
+                    afficherTexteBtn[i].addEventListener("click", function () {
+                        document.querySelector(".modal p").textContent = cars[i];
+                        overlay.style.display = "block";
+                    });
+                }
+                afficherTexteBtn[1].addEventListener("click", function () {
+                    overlay.style.display = "block";
+                });
+
+                fermerModalBtn.addEventListener("click", function () {
+                    overlay.style.display = "none";
+                });
+            });
+        </script>
         <header>
             <a href="Accueil.html"><img class="logo" src="images/logo.png" alt="logo"></a>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-    const afficherTexteBtn = document.querySelector(".cliquable");
-    const overlay = document.getElementById("overlay");
-    const modal = document.getElementById("modal");
-    const fermerModalBtn = document.getElementById("fermerModal");
-
-    afficherTexteBtn.addEventListener("click", function () {
-        overlay.style.display = "block";
-    });
-
-    fermerModalBtn.addEventListener("click", function () {
-        overlay.style.display = "none";
-    });
-});
-
-            </script>
+            
             <nav>
                 <ul class="nav_links">
                     <li><a href="Accueil.html">Accueil</a></li>
@@ -43,7 +50,7 @@
             <div class="cliquable">
                 <img src="images/president.jpg" alt="Description de l'image">
                 <div class = "texte-bas">
-                    <h3>Nom Prenom</h3>
+                    <h3>Thierry ABELLI</h3>
                     <p>Maire de la Ville de Terre de Bas
                         Présidente par délégation, pour les communes des Saintes, des commissions :
                         Transports urbain, scolaire et maritime
@@ -51,93 +58,139 @@
                     </p>
                 </div>
             </div>
-        </div>
+        </div>          
         <div class = "president">
             <h2>Vice-President</h2>
             <div class="cliquable">
-                <img src="images/president.jpg" alt="Description de l'image">
+                <img src="images/francisque.jpg" alt="Description de l'image">
                 <div class = "texte-bas">
-                    <h3>Nom Prenom</h3>
-                    <p>Maire de la Ville de Terre de Bas
-                        Présidente par délégation, pour les communes des Saintes, des commissions :
-                        Transports urbain, scolaire et maritime
-                        Environnement et Cadre de vie
+                    <h3>FRANCISQUE Jean-Louis</h3>
+                    <p>1er Vice-Président :
+
+                        Maire de la Ville de Trois-Rivières
+                        Président du SMEAG
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class = "vice">
+                <img src="images/leon.jpg" alt="Description de l'image">
+                <div class = "texte-bas">
+                    <h3>LEON Alain</h3>
+                    <p>2eme Vice-Président
+
+                        Conseiller municipal de la ville de Capesterre Belle-Eau
+                        Président par délégation de la commission Irrigation
+                    </p>
+                </div>
+        </div>
+        <div class = "president">
+            <div class="cliquable">
+                <img src="images/edmond.jpg" alt="Description de l'image">
+                <div class = "texte-bas">
+                    <h3>EDMOND Claude</h3>
+                    <p>3eme Vice-Président :
+
+                        Maire de la Ville de Gourbeyre
+                        Président par délégation de la commission Ressources humaines, Contrôle de gestion, Coopération et Mutualisation
                     </p>
                 </div>
             </div>
         </div>
         <div class = "president">
             <div class="cliquable">
-                <img src="images/president.jpg" alt="Description de l'image">
+                <img src="images/andre.jpg" alt="Description de l'image">
                 <div class = "texte-bas">
-                    <h3>Nom Prenom</h3>
-                    <p>Maire de la Ville de Terre de Bas
-                        Présidente par délégation, pour les communes des Saintes, des commissions :
-                        Transports urbain, scolaire et maritime
-                        Environnement et Cadre de vie
+                    <h3>ANDRE Héric
+                    </h3>
+                    <p>4eme Vice-Président :
+
+                        Maire de la Ville de Vieux-Fort
+                        Président par délégation des commissions DSP Marina, DSP Maritime, GEMAPI et GEPU
                     </p>
                 </div>
             </div>
         </div>
         <div class = "president">
             <div class="cliquable">
-                <img src="images/president.jpg" alt="Description de l'image">
+                <img src="images/nadille.jpg" alt="Description de l'image">
                 <div class = "texte-bas">
-                    <h3>Nom Prenom</h3>
+                    <h3>NADILLE-VALA Rolande</h3>
                     <p>Maire de la Ville de Terre de Bas
                         Présidente par délégation, pour les communes des Saintes, des commissions :
                         Transports urbain, scolaire et maritime
                         Environnement et Cadre de vie
+                        Sport et Culture
                     </p>
                 </div>
             </div>
         </div>
         <div class = "president">
             <div class="cliquable">
-                <img src="images/president.jpg" alt="Description de l'image">
+                <img src="images/gustave.jpg" alt="Description de l'image">
                 <div class = "texte-bas">
-                    <h3>Nom Prenom</h3>
-                    <p>Maire de la Ville de Terre de Bas
-                        Présidente par délégation, pour les communes des Saintes, des commissions :
-                        Transports urbain, scolaire et maritime
-                        Environnement et Cadre de vie
+                    <h3>GUSTAVE-DIT-DUFLO Sylvie</h3>
+                    <p>6eme Vice-Présidente :
+
+                        Conseillère Municipale de la ville de Baillif
+                        Conseillère Régionale
+                        Présidente de l’Agence de la Biodiversité
+                        *** *** ***
+                        Membre de la Commission Environnement, Ecologie et Biodiversité
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class = "president">
+            <div class="cliquable">
+                <img src="images/anselme.jpg" alt="Description de l'image">
+                <div class = "texte-bas">
+                    <h3>ANSELME Jacques</h3>
+                    <p>7ème Vice-Présidente :
+
+                        Adjoint au maire de la Ville de Trois-Rivières
+                        Président par délégation de la Commission Transport
                     </p>
                 </div>
             </div>
         </div>
         <div class = "president">
             <div class="cliquable">
-                <img src="images/president.jpg" alt="Description de l'image">
+                <img src="images/penchard.jpg" alt="Description de l'image">
                 <div class = "texte-bas">
-                    <h3>Nom Prenom</h3>
-                    <p>Maire de la Ville de Terre de Bas
-                        Présidente par délégation, pour les communes des Saintes, des commissions :
-                        Transports urbain, scolaire et maritime
-                        Environnement et Cadre de vie
+                    <h3>PENCHARD Marie-Luce</h3>
+                    <p>8eme Vice-Président :
+
+                        Conseillère municipale de la ville de Basse-Terre
+                        Vice Présidente du Conseil Régional
+                        ***
+                        Président par délégation des Commissions Affaires Européennes et Coopération avec la Caraïbe
                     </p>
                 </div>
             </div>
         </div>
+
         <div class = "president">
             <div class="cliquable">
-                <img src="images/president.jpg" alt="Description de l'image">
+                <img src="images/caravel.jpg" alt="Description de l'image">
                 <div class = "texte-bas">
-                    <h3>Nom Prenom</h3>
-                    <p>Maire de la Ville de Terre de Bas
-                        Présidente par délégation, pour les communes des Saintes, des commissions :
-                        Transports urbain, scolaire et maritime
-                        Environnement et Cadre de vie
+                    <h3>CARAVEL Joëlle</h3>
+                    <p>9eme Vice-Présidente :
+
+                        Conseillère municipale de la ville de Capesterre Belle-Eau
+                        Présidente par délégation des Commissions Politique de la Ville et Sports et Culture
                     </p>
                 </div>
             </div>
         </div>
-    <div class="overlay" id="overlay">
-        <div class="modal" id="modal">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <button id="fermerModal">Fermer</button>
+                    
+    <div class="overlay" >
+        <div class="modal">
+            <p></p>
+            <button class="fermerModal">Fermer</button>
+        </div>
     </div>
-    
-        </div>
         <footer class="footer">
             <div class="container">
                 <div class="row">

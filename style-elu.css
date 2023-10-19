@@ -4,7 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #24252A;
+
 }
 
 header li, header a, header button {
@@ -19,6 +19,12 @@ header li, header a, header button {
     width : 5%;
 }
 header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /* Pour s'assurer que le header est au-dessus du contenu */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajoutez une ombre légère si vous le souhaitez */
     height: 60px;
     background-color: #5b5b5b;
     display: table-header-group;
@@ -29,11 +35,11 @@ header{
 }
 
 .logo{
-    top : 5px;
+    top : 0px;
     background-color: #5b5b5b;
     position : relative;
     cursor: pointer;
-    height: 70px;
+    height: 55px;
 
 }
 
@@ -138,11 +144,12 @@ header{
 }
 
 .titre {
+    margin-top:3%;
     font-size: 36px; /* Taille de police en gros */
     text-align: center; /* Centrer le texte horizontalement */
-    background-color: #422f2f; /* Fond gris clair */
+    background-color: #946d90; /* Fond gris clair */
     padding: 10px; /* Espace intérieur autour du texte */
-    position: relative;
+    color :white;
 }
 .president {
     background-color: rgb(255, 255, 255); /* Fond gris clair */
@@ -167,14 +174,24 @@ header{
     font-size: 24px; /* Taille du texte en gros */
     margin-bottom: 10px; /* Ajouter une marge en bas du paragraphe */
 }
-.cliquable *{
-    background-color: rgb(119, 168, 141);
-    
+
+.cliquable {
+    background-color: rgb(119, 168, 141);   
+    transition: transform 0.3s,box-shadow 0.3s;
 }
-.cliquable{
-    transition: transform 0.3s;
+
+.cliquable img {
+    width: 200px; /* Ajustez la taille selon vos besoins */
+    height: 200px; /* Ajustez la taille selon vos besoins */
+    object-fit: cover; /* Redimensionne l'image pour qu'elle remplisse le conteneur */
+    margin-top:10px;
+    padding-left:10px;
+}
+.cliquable *{
+    background-color: rgb(119, 168, 141);   
 }
 .cliquable:hover {
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
     transform: scale(1.1);
 }
 
@@ -196,9 +213,14 @@ header{
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1;
 }
+.overlay p{
+    color : black;
+    background-color: #cec4c4;
+}
 
 .modal {
-    background-color: #fff;
+    color:rgb(187, 186, 186);
+    background-color: #cec4c4;
     padding: 20px;
     border-radius: 5px;
     position: absolute;
@@ -207,7 +229,16 @@ header{
     transform: translate(-50%, -50%);
     z-index: 2;
 }
-
+.modal button{
+    background-color: #6b7071;
+}
 button {
     cursor: pointer;
+}
+.vice{
+    background-color: #aeb6b8;
+}
+.vice img{
+    height: 5%;
+    width : 7%;
 }

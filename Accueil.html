@@ -6,12 +6,25 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <header>
+        <script>
+            window.addEventListener("scroll", function() {
+                var nav = document.querySelector("header");
+                var video = document.querySelector(".video-container");
+                var navHeight = nav.offsetHeight;
+                var videoBottom = video.offsetTop + video.offsetHeight;
+        
+                if (window.scrollY > videoBottom - navHeight) {
+                    nav.classList.remove("transparent-nav");
+                } else {
+                    nav.classList.add("transparent-nav");
+                }
+            });
+        </script>
+        <header>   
             <a href="#"><img class="logo" src="images/logo.png" href="#" alt="logo"></a>
-
             <nav>
                 <ul class="nav_links">
-                    <li><a href="#">Accueil</a></li>
+                    <li><a href="Accueil.html">Accueil</a></li>
                     <li><a href="#">Actualités</a></li>
                     <li><a href="elu.html">Elus</a></li>
                     <li><a href="#">Communes menbres</a></li>
@@ -20,34 +33,37 @@
             </nav>
             <a class="cta" href="#bottom"><button>Contact</button></a>
         </header>
-        <div id="video">
-            <video  autoplay loop muted>
-                <source src="video/martinique.mp4" type=video/mp4>
+        <div class="video-container">
+            <video autoplay loop muted playsinline>
+                <source src="video/caraibe (2).mp4" type="video/mp4">
             </video>
         </div>
-        <div>
-            <p class="para">Et quoniam mirari posse quosdam peregrinos existimo haec lecturos forsitan, si contigerit, quamobrem cum oratio ad ea monstranda deflexerit quae Romae gererentur, nihil praeter seditiones narratur et tabernas et vilitates harum similis alias, summatim causas perstringam nusquam a veritate sponte propria digressurus.
+        <div id="presentation" class="container-fluid">
+            <div class="container titre">
+                <h2>À propos de la ville</h2>
+            </div>
+            <div id="ville" class="container">
+                <p>Et quoniam mirari posse quosdam peregrinos existimo haec lecturos forsitan, si contigerit, quamobrem cum oratio ad ea monstranda deflexerit quae Romae gererentur, nihil praeter seditiones narratur et tabernas et vilitates harum similis alias, summatim causas perstringam nusquam a veritate sponte propria digressurus.
 
-                Nihil morati post haec militares avidi saepe turbarum adorti sunt Montium primum, qui divertebat in proximo, levi corpore senem atque morbosum, et hirsutis resticulis cruribus eius innexis divaricaturn sine spiramento ullo ad usque praetorium traxere praefecti.
-                
-                Sed cautela nimia in peiores haeserat plagas, ut narrabimus postea, aemulis consarcinantibus insidias graves apud Constantium, cetera medium principem sed siquid auribus eius huius modi quivis infudisset ignotus, acerbum et inplacabilem et in hoc causarum titulo dissimilem sui.</p>
-        </div>
+                    Nihil morati post haec militares avidi saepe turbarum adorti sunt Montium primum, qui divertebat in proximo, levi corpore senem atque morbosum, et hirsutis resticulis cruribus eius innexis divaricaturn sine spiramento ullo ad usque praetorium traxere praefecti.
 
+                    Sed cautela nimia in peiores haeserat plagas, ut narrabimus postea, aemulis consarcinantibus insidias graves apud Constantium, cetera medium principem sed siquid auribus eius huius modi quivis infudisset ignotus, acerbum et inplacabilem et in hoc causarum titulo dissimilem sui.</p>
+            </div>
+        </div>  
         <div class = "total">
             <div class = "elu">
-                <a href="#"><img src="images/logo.png" href="#" alt="logo"></a>
+                <a href="#"><img src="images/elu.jpg" href="#" alt="logo"></a>
                 <p>Les Elus</p>
             </div>
             <div class = "commune">
-                <a href="#"><img src="images/logo.png" href="#" alt="logo"></a>
+                <a href="#"><img src="images/commune_menbre.jpg" href="#" alt="logo"></a>
                 <p>Les Communes Menbres</p>
             </div>
             <div class = "infos">
-                <a href="#"><img src="images/logo.png" href="#" alt="logo"></a>
+                <a href="#"><img src="images/info.png" href="#" alt="logo"></a>
                 <p>Infos Pratiques</p>
             </div>
         </div>
-        <p class = "act">Actualités</p>
         <div class="actu">
             <div class="principale">
                 <a href="#"><img src="images/logo.png" href="#" alt="logo"></a>
@@ -107,6 +123,6 @@
                     </div>
                 </div>
             </div>
-        </footer>
+       </footer>
     </body>
 </html>
