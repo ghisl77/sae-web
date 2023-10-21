@@ -1,15 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 *{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 header li, header a, header button {
-    background-color: #5b5b5b;
-    font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 18px;
     color: #edf0f1;
@@ -26,7 +24,7 @@ header{
     z-index: 100; /* Pour s'assurer que le header est au-dessus du contenu */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajoutez une ombre légère si vous le souhaitez */
     height: 60px;
-    background-color: #5b5b5b;
+    background-color: #244a63;
     display: table-header-group;
     display: flex;
     justify-content: space-between;
@@ -36,7 +34,6 @@ header{
 
 .logo{
     top : 0px;
-    background-color: #5b5b5b;
     position : relative;
     cursor: pointer;
     height: 55px;
@@ -59,7 +56,7 @@ header{
 
 .cta button{
     padding: 9px 25px;
-    background-color: rgb(50, 50, 50);
+    background-color: rgb(41, 86, 128);
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -67,18 +64,18 @@ header{
 }
 
 .cta button:hover{
-    background-color: #577279;
+    background-color: #246271;
 }
 
 
 .footer{
-    background-color: #5b5b5b;
+    background-color: #244a63;
     width: 100%;
     padding: 35px 0;
 }
 
 .footer *{
-    background-color: #5b5b5b;
+    background-color: #244a63;
 }
 
 .footer .container{
@@ -129,12 +126,12 @@ header{
     display: inline-block;
     height: 40px;
     width: 40px;
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(80, 110, 119, 0.2);
     margin:0 10px 10px 0;
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
-    color: #ffffff;
+    color: #090909;
     transition: all 0.5s ease;
 }
 
@@ -147,55 +144,28 @@ header{
     margin-top:3%;
     font-size: 36px; /* Taille de police en gros */
     text-align: center; /* Centrer le texte horizontalement */
-    background-color: #946d90; /* Fond gris clair */
+    background-color:#5c8c98 ; /* Fond gris clair */
     padding: 10px; /* Espace intérieur autour du texte */
     color :white;
 }
-.president {
-    background-color: rgb(255, 255, 255); /* Fond gris clair */
+.cliquable {
     padding: 20px; /* Espace intérieur autour du contenu */
     color :white;
-    padding-left: 10%;
-    padding-right: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10px;
+    background-color: rgb(52, 128, 172); 
+    margin-top:2%;
 }
 
-
-.president img {
-    float: left; /* Aligner l'image à gauche */
-    margin-right: 20px; /* Espace à droite de l'image */
-    border-radius: 20px;
-    height:200px;
-}
-.president h2 {
-    background-color: rgb(236, 193, 193);
-    text-align: center;
-    color : white;
-    font-size: 24px; 
-    font-size: 24px; /* Taille du texte en gros */
-    margin-bottom: 10px; /* Ajouter une marge en bas du paragraphe */
-}
-
-.cliquable {
-    background-color: rgb(119, 168, 141);   
-    transition: transform 0.3s,box-shadow 0.3s;
-}
 
 .cliquable img {
-    width: 200px; /* Ajustez la taille selon vos besoins */
-    height: 200px; /* Ajustez la taille selon vos besoins */
-    object-fit: cover; /* Redimensionne l'image pour qu'elle remplisse le conteneur */
-    margin-top:10px;
-    padding-left:10px;
-}
-.cliquable *{
-    background-color: rgb(119, 168, 141);   
-}
-.cliquable:hover {
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-    transform: scale(1.1);
+    float: left; /* Aligner l'image à gauche */
+    margin-right: 20px; /* Espace à droite de l'image */    
+    height:222px;
 }
 
-.president p{
+.cliquable p{
     padding:40px;
     text-align:center;
     height:200px;
@@ -213,14 +183,10 @@ header{
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1;
 }
-.overlay p{
-    color : black;
-    background-color: #cec4c4;
-}
 
 .modal {
     color:rgb(187, 186, 186);
-    background-color: #cec4c4;
+    background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     position: absolute;
@@ -229,16 +195,68 @@ header{
     transform: translate(-50%, -50%);
     z-index: 2;
 }
-.modal button{
-    background-color: #6b7071;
-}
+
 button {
     cursor: pointer;
 }
-.vice{
-    background-color: #aeb6b8;
+
+#global{
+    margin-left: 15%;
+    margin-right: 15%;
 }
-.vice img{
-    height: 5%;
-    width : 7%;
+
+#global h2{
+    background-color: rgb(35, 106, 139);
+    text-align: center;
+    color : white;
+    font-size: 24px; 
+    font-size: 24px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+
+
+#global #presi{
+    box-shadow: 0px 5px 10px 2px #888888;
+    background-color:rgb(243, 243, 243);
+    height: 280px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#global .row{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.carte{
+    box-shadow: 10px 10px 20px 3px #888888;
+    border-radius: 1%;
+    height: 300px;
+    width: 260px;
+    background-color:rgb(243, 243, 243);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 0%;
+    padding-right: 0%;
+    transition: transform 0.3s;
+}
+.carte:hover{
+    transform: scale(1.1); 
+}
+
+#global img{
+    height: 150px;
+    border-radius: 100%;
+    margin-top: 10px;
+}
+
+#global h3{
+    padding: 10px;
+}
+.texte-bas h3{
+    text-align: center;
 }
