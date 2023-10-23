@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 *{
+    font-family: "Montserrat", sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -8,8 +9,6 @@
   }
   
   header li, header a, header button {
-     background-color: #3979a3;
-      font-family: "Montserrat", sans-serif;
       font-weight: 500;
       font-size: 18px;
       color: #edf0f1;
@@ -20,13 +19,11 @@
   }
   header{
       position: fixed;
-      top: 0;
-      left: 0;
       width: 100%;
-      z-index: 100; /* Pour s'assurer que le header est au-dessus du contenu */
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajoutez une ombre légère si vous le souhaitez */
+      z-index: 100; 
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       height: 60px;
-      background-color: #3979a3;
+      background-color: #244a63;
       display: table-header-group;
       display: flex;
       justify-content: space-between;
@@ -36,16 +33,10 @@
   
   .logo{
       top : 0px;
-      background-color: #3979a3;;
       position : relative;
       cursor: pointer;
       height: 55px;
   
-  }
-  
-  .nav_links{
-      display: flex;
-      list-style: none;
   }
   
   .nav_links li{
@@ -67,12 +58,12 @@
   }
   
   .cta button:hover{
-      background-color: #577279;
+      background-color: #246271;
   }
   
   
 #presentation{
-    background-color: #3f925f;
+    background-color: #2d91b6;
     border-bottom: dashed white;
 }
 
@@ -96,33 +87,40 @@
     padding-top: 41px;
     padding-bottom: 41px;
 }
+#ville{
+    padding-right: 10%;
+    padding-left: 10%;
+}
 
 #presentation p{
     color: white;
     text-align: center;
 }
 .total{
-    background-color: #6395a1;
+    background-color: #244a63;
     display:flex;
     justify-content: space-between;
-    padding: 30px 10%;
+    padding: 30px;
+    box-shadow: 0px 5px 10px 2px #888888;
+    flex-wrap: wrap;
 }
 .total p{
     color : white;
+    padding-top:10px;
 }
 .total img{
     height : 200px;
 }
 .elu, .commune, .infos {
-    background-color: #8491b1;
+    background-color: #206983;
     flex: 1; /* Chaque div occupera une part égale de l'espace disponible */
     text-align: center; /* Centre le contenu horizontalement */
-    padding: 10px;
+    padding: 20px;
     border: 1px solid #1e2d35;
-    margin: 5px;
+    margin: 30px;
     transition: transform 0.3s; /* Pour ajouter une transition agréable lorsqu'elles sont agrandies */
+    box-shadow: 0px 5px 5px 1px #4e8dac;
 }
-
 .elu:hover, .commune:hover, .infos:hover {
     transform: scale(1.1); /* Agrandit la div au survol de la souris */
     font-size: 18px;
@@ -135,44 +133,53 @@
 }
 
 .actu .principale{
+    border: 3px solid #c4c2c2;
+    text-align: center;
+    background-color: #2d91b620;
+    flex-basis: 40%;
     padding-top: 2%;
     padding-bottom: 2%;
+    transition: transform 0.3s;
+    margin-top : 30px;
+    margin-bottom : 30px;
 }
 
 .actu .principale img{
     height: 100%;
 }
 
+.actu .secondaire .haut, .actu .secondaire .bas{
+    border: 3px solid #c4c2c2;
+    margin-top : 30px;
+    margin-bottom : 30px;
+    background-color: #2d91b620;
+    transition: transform 0.3s;
+}
+
 .actu .secondaire img{
     padding: 20px;
 }
-
 
 .act{
     margin-left:100px;
     font-size: 30px;
     color: #edf0f1;
 }
-.haut img:hover{
-    height: 45%;
-}
-/* Ajoutez ces styles dans votre fichier CSS */
-.actu img {
-    transition: transform 0.3s; /* Ajoutez une transition pour une animation fluide */
-}
 
-.actu img:hover {
+
+
+.actu .principale:hover, .actu .secondaire .haut:hover, .actu .secondaire .bas:hover {
     transform: scale(1.1); /* Agrandir l'image au survol de la souris */
 }
 
 .footer{
-    background-color: #5b5b5b;
+    background-color: #244a63;
     width: 100%;
     padding: 35px 0;
 }
 
 .footer *{
-    background-color: #5b5b5b;
+    background-color: #244a63;
 }
 
 .footer .container{
@@ -248,11 +255,17 @@ video {
     width: 100%; /* Pour s'adapter au conteneur */
     height: 100%; /* Pour s'adapter au conteneur */
 }
-.transparent-nav {
-    background-color: rgba(112, 107, 107, 0.5);
+
+@media screen and (max-width : 1000px){
+    .actu .principale{
+        flex-basis: 90%;
+    }
+    .actu .secondaire{
+        flex-basis: 90%;
+        text-align: center;
+    }
 }
-.transparent-nav li, .transparent-nav a, .transparent-nav button, .transparent-nav a,.transparent-nav nav,.transparent-nav ul,.transparent-nav .cta{
-    background-color: rgba(112, 107, 107, 0.5);
-    color : rgba(255, 255, 255, 0.5);
+@media screen and (max-width : 1220px){
+
 }
 

@@ -173,7 +173,7 @@ header{
 }
 
 
-.overlay {
+#overlay {
     display: none;
     position: fixed;
     top: 0;
@@ -184,18 +184,23 @@ header{
     z-index: 1;
 }
 
-.modal {
-    color:rgb(187, 186, 186);
+#modal {
+    display: flex;
+    color:rgb(34, 32, 32);
     background-color: #fff;
-    padding: 20px;
+    padding-top: 100px;
     border-radius: 5px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
+    padding-right: 10px;
 }
-
+#modal img{
+    height: 50%;
+   
+}
 button {
     cursor: pointer;
 }
@@ -229,6 +234,7 @@ button {
     display: flex;
     justify-content: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .carte{
