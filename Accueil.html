@@ -6,20 +6,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <script>
-            window.addEventListener("scroll", function() {
-                var nav = document.querySelector("header");
-                var video = document.querySelector(".video-container");
-                var navHeight = nav.offsetHeight;
-                var videoBottom = video.offsetTop + video.offsetHeight;
-        
-                if (window.scrollY > videoBottom - navHeight) {
-                    nav.classList.remove("transparent-nav");
-                } else {
-                    nav.classList.add("transparent-nav");
-                }
-            });
-        </script>
+
         <header>   
             <a href="#"><img class="logo" src="images/logo.png" href="#" alt="logo"></a>
             <nav>
@@ -27,7 +14,7 @@
                     <li><a href="Accueil.html">Accueil</a></li>
                     <li><a href="#">Actualités</a></li>
                     <li><a href="elu.html">Elus</a></li>
-                    <li><a href="#">Communes menbres</a></li>
+                    <li><a href="#">Communes membres</a></li>
                     <li><a href="#">Infos pratiques</a></li>
                 </ul>
             </nav>
@@ -52,12 +39,12 @@
         </div>  
         <div class = "total">
             <div class = "elu">
-                <a href="#"><img src="images/elu.jpg" href="#" alt="logo"></a>
+                <a href="elu.html"><img src="images/group-chat.png" href="#" alt="logo"></a>
                 <p>Les Elus</p>
             </div>
             <div class = "commune">
-                <a href="#"><img src="images/commune_menbre.jpg" href="#" alt="logo"></a>
-                <p>Les Communes Menbres</p>
+                <a href="#"><img src="images/communesMembres.png" href="#" alt="logo"></a>
+                <p>Les Communes Membres</p>
             </div>
             <div class = "infos">
                 <a href="#"><img src="images/info.png" href="#" alt="logo"></a>
@@ -85,11 +72,11 @@
             <div class="container">
                 <div class="row">
                     <div class="footer-col">
-                        <h4>company</h4>
+                        <h4>Administration</h4>
                         <ul>
-                            <li><a href="#">about us</a></li>
-                            <li><a href="#">our services</a></li>
-                            <li><a href="#">privacy policy</a></li>
+                            <li><a href="#">a propos</a></li>
+                            <li><a href="#"> 05 90 99 63 20</a></li>
+                            <li><a href="#">Facebook</a></li>
                             <li><a href="#">affiliate program</a></li>
                         </ul>
                     </div>
@@ -123,6 +110,6 @@
                     </div>
                 </div>
             </div>
-       </footer>
+        </footer>
     </body>
 </html>
