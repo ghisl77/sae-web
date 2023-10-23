@@ -7,31 +7,82 @@
     </head>
     <body>
         <script>
-            const cars = ["Saab", "Volvo", "BMW"];
             document.addEventListener("DOMContentLoaded", function () {
-                const afficherTexteBtn = document.getElementsByClassName("cliquable");
-                const overlay = document.querySelector(".overlay");
-                const modal = document.querySelector(".modal");
-                const fermerModalBtn = document.querySelector(".fermerModal");
+                const afficherTexte = document.getElementById("presi");
+                const overlay = document.getElementById("overlay");
+                const modal = document.getElementById("modal");
+                const fermerModalBtn = document.getElementById("fermerModal");
 
-                for (let i = 0; i < afficherTexteBtn.length; i++) {
-                    afficherTexteBtn[i].addEventListener("click", function () {
-                        document.querySelector(".modal p").textContent = cars[i];
-                        overlay.style.display = "block";
-                    });
-                }
-                afficherTexteBtn[1].addEventListener("click", function () {
+                afficherTexte.addEventListener("click", function () {
                     overlay.style.display = "block";
                 });
-
-                fermerModalBtn.addEventListener("click", function () {
+                fermerModal.addEventListener("click", function () {
                     overlay.style.display = "none";
                 });
             });
+            var descr=["Maire de la Ville de Trois-Rivières Président du SMEAG",
+                    "Maire de la Ville de Terre de Bas Présidente par délégation, pour les communes des Saintes, des commissions : Transports urbain, scolaire et maritime Environnement et Cadre de vie Sport et Culture",
+                    "Conseillère municipale de la ville de Capesterre Belle-Eau Présidente par délégation des Commissions Politique de la Ville et Sports et Culture",
+                    "Conseiller municipal de la ville de Capesterre Belle-Eau Président par délégation de la commission Irrigation",
+                    "Conseillère Municipale de la ville de Baillif Conseillère Régionale Présidente de l'Agence de la Biodiversité    Membre de la Commission Environnement, Ecologie et Biodiversité",
+                    "Maire de la Ville de Gourbeyre Président par délégation de la commission Ressources humaines, Contrôle de gestion, Coopération et Mutualisation",
+                    "Adjoint au maire de la Ville de Trois-Rivières Président par délégation de la Commission Transport",
+                    "Maire de la Ville de Vieux-Fort Président par délégation des commissions DSP Marina, DSP Maritime, GEMAPI et GEPU",
+                    "Conseillère municipale de la ville de Basse-Terre Vice Présidente du Conseil Régional  Président par délégation des Commissions Affaires Européennes et Coopération avec la Caraïbe"
+                    ];
+                    document.addEventListener("DOMContentLoaded", function () {
+                const afficherTexteBtn = document.getElementsByClassName("cliquable");
+                const afficherTexteBtn1 = document.querySelector(".texte-bas p");
+                const president1Text = document.querySelector(".cliquable .texte-bas");
+                const president1Image = document.querySelector(".cliquable img");
+                const carteElements = document.querySelectorAll(".carte");
+
+                for (let i = 0; i < carteElements.length; i++) {
+                    carteElements[i].addEventListener("click", function () {
+                        afficherTexteBtn1.textContent = descr[i];
+                    });
+                }
+                carteElements.forEach(function (carte, index) {
+                    carte.addEventListener("click", function () {
+                        
+                        const text = carte.querySelector("h3").textContent;
+                        const imageSrc = carte.querySelector("img").getAttribute("src");
+                        president1Text.querySelector("h3").textContent = text;
+                        president1Image.setAttribute("src", imageSrc);
+                    });
+                });
+
+            });
+            document.addEventListener("DOMContentLoaded", function () {
+    // Select all elements with the class "carte"
+    const carteElements = document.querySelectorAll(".carte");
+
+    // Initialize a flag to track whether scrolling is allowed
+    let canScroll = true;
+
+    // Add a click event listener to each "carte" element
+    carteElements.forEach(function (carte) {
+      carte.addEventListener("click", function () {
+        if (canScroll) {
+          // Scroll to the target element
+          const targetElement = document.getElementById("scroll-target");
+          const offsetTop = targetElement.getBoundingClientRect().width;
+          window.scroll({
+            top: offsetTop,
+            behavior: "smooth",
+          });
+
+          // Disable further scrolling
+          
+        }
+      });
+    });
+  });
+
+
         </script>
         <header>
             <a href="Accueil.html"><img class="logo" src="images/logo.png" alt="logo"></a>
-            
             <nav>
                 <ul class="nav_links">
                     <li><a href="Accueil.html">Accueil</a></li>
@@ -43,154 +94,92 @@
             </nav>
             <a class="cta" href="#bottom"><button>Contact</button></a>
         </header>
-        <div class = "titre">Les Elus
-        </div>
-        <div class = "president">
-            <h2>President</h2>
-            <div class="cliquable">
-                <img src="images/president.jpg" alt="Description de l'image">
-                <div class = "texte-bas">
-                    <h3>Thierry ABELLI</h3>
-                    <p>Maire de la Ville de Terre de Bas
-                        Présidente par délégation, pour les communes des Saintes, des commissions :
-                        Transports urbain, scolaire et maritime
-                        Environnement et Cadre de vie
-                    </p>
+        <div id="overlay" >
+            <div id="modal">
+                <div><img src="images/president.jpg" alt=""></div>
+                <div>
+                <h3>Thierry ABELLI</h3>
+                <p>Maire de la Ville de Terre de Bas
+                    Présidente par délégation, pour les communes des Saintes, des commissions :
+                    Transports urbain, scolaire et maritime
+                    Environnement et Cadre de vie
+                </p>
+                <li><a href="#"> 05 90 99 63 20</a></li>
+                <button id="fermerModal">Fermer</button>
                 </div>
             </div>
-        </div>          
-        <div class = "president">
+        </div>
+        <div class = "titre">Les Elus
+        </div>
+        <div id="global">
+            <h2>President</h2>
+            <div id="presi">
+                <img src="images/president.jpg" alt="">
+                <h3>Thierry ABELLI</h3>
+                <h5>Président</h5>
+            </div>
             <h2>Vice-President</h2>
-            <div class="cliquable">
+            <div class="row">
+                <div class="carte">
+                    <img src="images/francisque.jpg" alt="">
+                    <h3>FRANCISQUE Jean-Louis</h3>
+                    <h5>Vice Président</h5>
+                </div>
+                <div class="carte">
+                    <img src="images/nadile.png" alt="">
+                    <h3>NADILLE-VALA Rolande</h3>
+                    <h5>Vice Président</h5>
+                </div>
+                <div class="carte">
+                    <img src="images/caravel.jpg" alt="">
+                    <h3>CARAVEL Joëlle</h3>
+                    <h5>Vice Président</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="carte">
+                    <img src="images/leon.jpg" alt="">
+                    <h3>LEON Alain</h3>
+                    <h5>Vice Président</h5>
+                </div>
+                <div class="carte">
+                    <img src="images/gustave.jpg" alt="">
+                    <h3>GUSTAVE-DIT-DUFLO Sylvie</h3>
+                    <h5>Vice Président</h5>
+                </div>
+                <div class="carte">
+                    <img src="images/edmond.jpg" alt="">
+                    <h3>EDMOND Claude</h3>
+                    <h5>Vice Président</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="carte">
+                    <img src="images/anselme.jpg" alt="">
+                    <h3>ANSELME Jacques</h3>
+                    <h5>Vice Président</h5>
+                </div>
+                <div class="carte">
+                    <img src="images/andre.jpg" alt="">
+                    <h3>ANDRE Héric</h3>
+                    <h5>Vice Président</h5>
+                </div>
+                <div class="carte">
+                    <img src="images/penchard.jpg" alt="">
+                    <h3>PENCHARD Marie-Luce</h3>
+                    <h5>Vice Président</h5>
+                </div>
+            </div>
+        </div>
+            <div class="cliquable" id="scroll-target">
                 <img src="images/francisque.jpg" alt="Description de l'image">
                 <div class = "texte-bas">
                     <h3>FRANCISQUE Jean-Louis</h3>
-                    <p>1er Vice-Président :
-
-                        Maire de la Ville de Trois-Rivières
-                        Président du SMEAG
+                    <p>Maire de la Ville de Trois-Rivières Président du SMEAG
                     </p>
                 </div>
             </div>
-        </div>
-        <div class = "vice">
-                <img src="images/leon.jpg" alt="Description de l'image">
-                <div class = "texte-bas">
-                    <h3>LEON Alain</h3>
-                    <p>2eme Vice-Président
 
-                        Conseiller municipal de la ville de Capesterre Belle-Eau
-                        Président par délégation de la commission Irrigation
-                    </p>
-                </div>
-        </div>
-        <div class = "president">
-            <div class="cliquable">
-                <img src="images/edmond.jpg" alt="Description de l'image">
-                <div class = "texte-bas">
-                    <h3>EDMOND Claude</h3>
-                    <p>3eme Vice-Président :
-
-                        Maire de la Ville de Gourbeyre
-                        Président par délégation de la commission Ressources humaines, Contrôle de gestion, Coopération et Mutualisation
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class = "president">
-            <div class="cliquable">
-                <img src="images/andre.jpg" alt="Description de l'image">
-                <div class = "texte-bas">
-                    <h3>ANDRE Héric
-                    </h3>
-                    <p>4eme Vice-Président :
-
-                        Maire de la Ville de Vieux-Fort
-                        Président par délégation des commissions DSP Marina, DSP Maritime, GEMAPI et GEPU
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class = "president">
-            <div class="cliquable">
-                <img src="images/nadille.jpg" alt="Description de l'image">
-                <div class = "texte-bas">
-                    <h3>NADILLE-VALA Rolande</h3>
-                    <p>Maire de la Ville de Terre de Bas
-                        Présidente par délégation, pour les communes des Saintes, des commissions :
-                        Transports urbain, scolaire et maritime
-                        Environnement et Cadre de vie
-                        Sport et Culture
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class = "president">
-            <div class="cliquable">
-                <img src="images/gustave.jpg" alt="Description de l'image">
-                <div class = "texte-bas">
-                    <h3>GUSTAVE-DIT-DUFLO Sylvie</h3>
-                    <p>6eme Vice-Présidente :
-
-                        Conseillère Municipale de la ville de Baillif
-                        Conseillère Régionale
-                        Présidente de l’Agence de la Biodiversité
-                        *** *** ***
-                        Membre de la Commission Environnement, Ecologie et Biodiversité
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class = "president">
-            <div class="cliquable">
-                <img src="images/anselme.jpg" alt="Description de l'image">
-                <div class = "texte-bas">
-                    <h3>ANSELME Jacques</h3>
-                    <p>7ème Vice-Présidente :
-
-                        Adjoint au maire de la Ville de Trois-Rivières
-                        Président par délégation de la Commission Transport
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class = "president">
-            <div class="cliquable">
-                <img src="images/penchard.jpg" alt="Description de l'image">
-                <div class = "texte-bas">
-                    <h3>PENCHARD Marie-Luce</h3>
-                    <p>8eme Vice-Président :
-
-                        Conseillère municipale de la ville de Basse-Terre
-                        Vice Présidente du Conseil Régional
-                        ***
-                        Président par délégation des Commissions Affaires Européennes et Coopération avec la Caraïbe
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class = "president">
-            <div class="cliquable">
-                <img src="images/caravel.jpg" alt="Description de l'image">
-                <div class = "texte-bas">
-                    <h3>CARAVEL Joëlle</h3>
-                    <p>9eme Vice-Présidente :
-
-                        Conseillère municipale de la ville de Capesterre Belle-Eau
-                        Présidente par délégation des Commissions Politique de la Ville et Sports et Culture
-                    </p>
-                </div>
-            </div>
-        </div>
-                    
-    <div class="overlay" >
-        <div class="modal">
-            <p></p>
-            <button class="fermerModal">Fermer</button>
-        </div>
-    </div>
         <footer class="footer">
             <div class="container">
                 <div class="row">
