@@ -65,6 +65,8 @@
 #presentation{
     background-color: #2d91b6;
     border-bottom: dashed white;
+    box-shadow: 0px 5px 5px 1px #4e8dac;
+    margin-bottom:5px;
 }
 
 #presentation .titre{
@@ -88,8 +90,12 @@
     padding-bottom: 41px;
 }
 #ville{
-    padding-right: 10%;
-    padding-left: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #3a7897;
+    border-radius: 80px;
 }
 
 #presentation p{
